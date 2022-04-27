@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></script>
+    <script src="scripts\project.js"></script>
+
+</head>
+<body>
+    <!--  crossing model script goes here, loop div creation based on number of people in file  -->
+
+    <div class="container">
+        <div class="animationcar"></div>
+
+        <div class="animation1"></div>
+        <div class="animation2"></div>
+        <div class="animation3"></div>
+        <div class="animation4"></div>
+        <div class="animation5"></div>
+        <div class="animation6"></div>
+        <div class="animation7"></div>
+        <div class="animation8"></div>
+        <div class="animation9"></div>
+        <div class="animation10"></div>
+    </div>
+    
+    <p>
+        <a id="button">
+            <button onclick="generateModel()" type="button">Generate Model</button> <!-- script to generate model called -->
+            <button onclick="document.location='parameterspage.html'" type="button">Set Parameters</button>
+            <button onclick="document.location='reactiontestmenu.html'" type="button">Begin Reaction Test</button>
+            <button onclick="document.location='parameterspage.html'" type="button">Save Results</button> <!-- script to load data -->
+            <button onclick="test()" type="button">Load Data</button> <!-- script to load data -->
+            <input type="file" id="file-input">
+        </a>
+    </p>
+   
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+  
+  body
+  {
+    background-color: grey;
+    
+
+  }
+
+  
+  .animationcar {
+    width: 100px;
+    height: 100px;
+    margin: 4px;
+    position: relative;
+    background-color: green;
+    float: right;
+    margin-top: 8%;
+  }
+  
+  .animation1 {
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+  }
+  .animation2 {
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+  }
+  .animation3 {
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+  }
+  .animation4 {
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+  }
+  .animation5 {
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+  }
+  .animation6 {
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+  }
+  .animation7 {
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+  }
+  .animation8 {
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+  }
+  .animation9 {
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+  }
+  .animation10 {
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+  }
+
+  #button
+  {
+    position:absolute;
+    margin-top: 44%;
+    float: left;
+    background-color: white;
+    border: 15px white;
+    padding: 17px;
+  }

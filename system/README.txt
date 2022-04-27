@@ -1,0 +1,1 @@
+open index.html either using a server or just through browser (google chrome recommended).

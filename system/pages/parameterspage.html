@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\main.css">
+    <script type="text/javascript" src="scripts\project.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.js"></script>
+</head>
+<body>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="10" value="1" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+    </div>
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+        
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+    </script>
+
+
+
+    <button name="numberofPeople" onclick="displayParameters(slider.value)" type="button">Confirm number of people</button>
+    
+
+    <fieldset id="fieldset1" style="display:block;">
+        <legend>Parameters</legend>
+        <p>Is pedestrian 1 drunk?</p>
+        <input type="radio" id="isDrunk" name="drunk_parameter" value="true">
+        <label for="isDrunk">yes</label><br>
+        <input type="radio" id="isnotDrunk" name="drunk_parameter" value="false">
+        <label for="isnotDrunk">no</label><br>
+
+        <p>Is pedestrian 1 young?</p>
+        <input type="radio" id="isYoung" name="young_parameter" value="true">
+        <label for="isYoung">yes</label><br>
+        <input type="radio" id="isnotYoung" name="young_parameter" value="false">
+        <label for="isnotYoung">no</label><br>
+
+        <p>Is pedestrian 1 old?</p>
+        <input type="radio" id="isOld" name="old_parameter" value="true">
+        <label for="isOld">yes</label><br>
+        <input type="radio" id="isnotOld" name="old_parameter" value="false">
+        <label for="isnotOld">no</label><br>
+
+        <p>Is pedestrian 1 tired?</p>
+        <input type="radio" id="isFatigued" name="tired_parameter" value="true">
+        <label for="isFatigued">yes</label><br>
+        <input type="radio" id="isnotFatigued" name="tired_parameter" value="false">
+        <label for="isnotFatigued">no</label><br>
+
+        <p>Is pedestrian 1 easily distracted?</p>
+        <input type="radio" id="isDistracted" name="distract_parameter" value="true">
+        <label for="isDistracted">yes</label><br>
+        <input type="radio" id="isnotDistracted" name="distract_parameter" value="false">
+        <label for="isnotDistracted">no</label><br>
+
+        <p>Is pedestrian 1 healthy?</p>
+        <input type="radio" id="isHealthy" name="health_parameter" value="true">
+        <label for="isHealthy">yes</label><br>
+        <input type="radio" id="isnotHealthy" name="health_parameter" value="false">
+        <label for="isnotHealthy">no</label><br>
+
+        <p>Is pedestrian 1 walking?</p>
+        <input type="radio" id="isWalking" name="walk_parameter" value="true">
+        <label for="isWalking">yes</label><br>
+        <input type="radio" id="isnotWalking" name="walk_parameter" value="false">
+        <label for="isnotWalking">no</label><br>
+
+    </fieldset>
+
+    <fieldset id="fieldset2" style="display:none;">
+        <legend>Parameters</legend>
+        <p>Is pedestrian 2 drunk?</p>
+        <input type="radio" id="isDrunk2" name="drunk_parameter2" value="true">
+        <label for="isDrunk">yes</label><br>
+        <input type="radio" id="isnotDrunk2" name="drunk_parameter2" value="false">
+        <label for="isnotDrunk">no</label><br>
+
+        <p>Is pedestrian 2 young?</p>
+        <input type="radio" id="isYoung2" name="young_parameter2" value="true">
+        <label for="isYoung">yes</label><br>
+        <input type="radio" id="isnotYoung2" name="young_parameter2" value="false">
+        <label for="isnotYoung">no</label><br>
+
+        <p>Is pedestrian 2 old?</p>
+        <input type="radio" id="isOld2" name="old_parameter2" value="true">
+        <label for="isOld">yes</label><br>
+        <input type="radio" id="isnotOld2" name="old_parameter2" value="false">
+        <label for="isnotOld">no</label><br>
+
+        <p>Is pedestrian 2 tired?</p>
+        <input type="radio" id="isFatigued2" name="tired_parameter2" value="true">
+        <label for="isFatigued">yes</label><br>
+        <input type="radio" id="isnotFatigued2" name="tired_parameter2" value="false">
+        <label for="isnotFatigued">no</label><br>
+
+        <p>Is pedestrian 2 easily distracted?</p>
+        <input type="radio" id="isDistracted2" name="distract_parameter2" value="true">
+        <label for="isDistracted">yes</label><br>
+        <input type="radio" id="isnotDistracted2" name="distract_parameter2" value="false">
+        <label for="isnotDistracted">no</label><br>
+
+        <p>Is pedestrian 2 healthy?</p>
+        <input type="radio" id="isHealthy2" name="health_parameter2" value="true">
+        <label for="isHealthy">yes</label><br>
+        <input type="radio" id="isnotHealthy2" name="health_parameter2" value="false">
+        <label for="isnotHealthy">no</label><br>
+
+        <p>Is pedestrian 2 walking?</p>
+        <input type="radio" id="isWalking2" name="walk_parameter2" value="true">
+        <label for="isWalking">yes</label><br>
+        <input type="radio" id="isnotWalking2" name="walk_parameter2" value="false">
+        <label for="isnotWalking">no</label><br>
+
+    </fieldset>
+
+    <fieldset id="fieldset3" style="display:none;">
+        <legend>Parameters</legend>
+        <p>Is pedestrian 3 drunk?</p>
+        <input type="radio" id="isDrunk3" name="drunk_parameter3" value="true">
+        <label for="isDrunk">yes</label><br>
+        <input type="radio" id="isnotDrunk3" name="drunk_parameter3" value="false">
+        <label for="isnotDrunk">no</label><br>
+
+        <p>Is pedestrian 3 young?</p>
+        <input type="radio" id="isYoung3" name="young_parameter3" value="true">
+        <label for="isYoung">yes</label><br>
+        <input type="radio" id="isnotYoung3" name="young_parameter3" value="false">
+        <label for="isnotYoung">no</label><br>
+
+        <p>Is pedestrian 3 old?</p>
+        <input type="radio" id="isOld3" name="old_parameter3" value="true">
+        <label for="isOld">yes</label><br>
+        <input type="radio" id="isnotOld3" name="old_parameter3" value="false">
+        <label for="isnotOld">no</label><br>
+
+        <p>Is pedestrian 3 tired?</p>
+        <input type="radio" id="isFatigued3" name="tired_parameter3" value="true">
+        <label for="isFatigued">yes</label><br>
+        <input type="radio" id="isnotFatigued3" name="tired_parameter3" value="false">
+        <label for="isnotFatigued">no</label><br>
+
+        <p>Is pedestrian 3 easily distracted?</p>
+        <input type="radio" id="isDistracted3" name="distract_parameter3" value="true">
+        <label for="isDistracted">yes</label><br>
+        <input type="radio" id="isnotDistracted3" name="distract_parameter3" value="false">
+        <label for="isnotDistracted">no</label><br>
+
+        <p>Is pedestrian 3 healthy?</p>
+        <input type="radio" id="isHealthy3" name="health_parameter3" value="true">
+        <label for="isHealthy">yes</label><br>
+        <input type="radio" id="isnotHealthy3" name="health_parameter3" value="false">
+        <label for="isnotHealthy">no</label><br>
+
+        <p>Is pedestrian 3 walking?</p>
+        <input type="radio" id="isWalking3" name="walk_parameter3" value="true">
+        <label for="isWalking">yes</label><br>
+        <input type="radio" id="isnotWalking3" name="walk_parameter3" value="false">
+        <label for="isnotWalking">no</label><br>
+
+    </fieldset>
+
+    <fieldset id="fieldset4" style="display:none;">
+        <legend>Parameters</legend>
+        <p>Is pedestrian 4 drunk?</p>
+        <input type="radio" id="isDrunk4" name="drunk_parameter4" value="true">
+        <label for="isDrunk">yes</label><br>
+        <input type="radio" id="isnotDrunk4" name="drunk_parameter4" value="false">
+        <label for="isnotDrunk">no</label><br>
+
+        <p>Is pedestrian 4 young?</p>
+        <input type="radio" id="isYoung4" name="young_parameter4" value="true">
+        <label for="isYoung">yes</label><br>
+        <input type="radio" id="isnotYoung4" name="young_parameter4" value="false">
+        <label for="isnotYoung">no</label><br>
+
+        <p>Is pedestrian 4 old?</p>
+        <input type="radio" id="isOld4" name="old_parameter4" value="true">
+        <label for="isOld">yes</label><br>
+        <input type="radio" id="isnotOld4" name="old_parameter4" value="false">
+        <label for="isnotOld">no</label><br>
+
+        <p>Is pedestrian 4 tired?</p>
+        <input type="radio" id="isFatigued4" name="tired_parameter4" value="true">
+        <label for="isFatigued">yes</label><br>
+        <input type="radio" id="isnotFatigued4" name="tired_parameter4" value="false">
+        <label for="isnotFatigued">no</label><br>
+
+        <p>Is pedestrian 4 easily distracted?</p>
+        <input type="radio" id="isDistracted4" name="distract_parameter4" value="true">
+        <label for="isDistracted">yes</label><br>
+        <input type="radio" id="isnotDistracted4" name="distract_parameter4" value="false">
+        <label for="isnotDistracted">no</label><br>
+
+        <p>Is pedestrian 4 healthy?</p>
+        <input type="radio" id="isHealthy4" name="health_parameter4" value="true">
+        <label for="isHealthy">yes</label><br>
+        <input type="radio" id="isnotHealthy4" name="health_parameter4" value="false">
+        <label for="isnotHealthy">no</label><br>
+
+        <p>Is pedestrian 4 walking?</p>
+        <input type="radio" id="isWalking4" name="walk_parameter4" value="true">
+        <label for="isWalking">yes</label><br>
+        <input type="radio" id="isnotWalking4" name="walk_parameter4" value="false">
+        <label for="isnotWalking">no</label><br>
+
+    </fieldset>
+
+    <fieldset id="fieldset5" style="display:none;">
+        <legend>Parameters</legend>
+        <p>Is pedestrian 5 drunk?</p>
+        <input type="radio" id="isDrunk5" name="drunk_parameter5" value="true">
+        <label for="isDrunk">yes</label><br>
+        <input type="radio" id="isnotDrunk5" name="drunk_parameter5" value="false">
+        <label for="isnotDrunk">no</label><br>
+
+        <p>Is pedestrian 5 young?</p>
+        <input type="radio" id="isYoung5" name="young_parameter5" value="true">
+        <label for="isYoung">yes</label><br>
+        <input type="radio" id="isnotYoung5" name="young_parameter5" value="false">
+        <label for="isnotYoung">no</label><br>
+
+        <p>Is pedestrian 5 old?</p>
+        <input type="radio" id="isOld5" name="old_parameter5" value="true">
+        <label for="isOld">yes</label><br>
+        <input type="radio" id="isnotOld5" name="old_parameter5" value="false">
+        <label for="isnotOld">no</label><br>
+
+        <p>Is pedestrian 5 tired?</p>
+        <input type="radio" id="isFatigued5" name="tired_parameter5" value="true">
+        <label for="isFatigued">yes</label><br>
+        <input type="radio" id="isnotFatigued5" name="tired_parameter5" value="false">
+        <label for="isnotFatigued">no</label><br>
+
+        <p>Is pedestrian 5 easily distracted?</p>
+        <input type="radio" id="isDistracted5" name="distract_parameter5" value="true">
+        <label for="isDistracted">yes</label><br>
+        <input type="radio" id="isnotDistracted5" name="distract_parameter5" value="false">
+        <label for="isnotDistracted">no</label><br>
+
+        <p>Is pedestrian 5 healthy?</p>
+        <input type="radio" id="isHealthy5" name="health_parameter5" value="true">
+        <label for="isHealthy">yes</label><br>
+        <input type="radio" id="isnotHealthy5" name="health_parameter5" value="false">
+        <label for="isnotHealthy">no</label><br>
+
+        <p>Is pedestrian 5 walking?</p>
+        <input type="radio" id="isWalking5" name="walk_parameter5" value="true">
+        <label for="isWalking">yes</label><br>
+        <input type="radio" id="isnotWalking5" name="walk_parameter5" value="false">
+        <label for="isnotWalking">no</label><br>
+
+    </fieldset>
+
+    <fieldset id="fieldset6" style="display:none;">
+        <legend>Parameters</legend>
+        <p>Is pedestrian 6 drunk?</p>
+        <input type="radio" id="isDrunk6" name="drunk_parameter6" value="true">
+        <label for="isDrunk">yes</label><br>
+        <input type="radio" id="isnotDrunk6" name="drunk_parameter6" value="false">
+        <label for="isnotDrunk">no</label><br>
+
+        <p>Is pedestrian 6 young?</p>
+        <input type="radio" id="isYoung6" name="young_parameter6" value="true">
+        <label for="isYoung">yes</label><br>
+        <input type="radio" id="isnotYoung6" name="young_parameter6" value="false">
+        <label for="isnotYoung">no</label><br>
+
+        <p>Is pedestrian 6 old?</p>
+        <input type="radio" id="isOld6" name="old_parameter6" value="true">
+        <label for="isOld">yes</label><br>
+        <input type="radio" id="isnotOld6" name="old_parameter6" value="false">
+        <label for="isnotOld">no</label><br>
+
+        <p>Is pedestrian 6 tired?</p>
+        <input type="radio" id="isFatigued6" name="tired_parameter6" value="true">
+        <label for="isFatigued">yes</label><br>
+        <input type="radio" id="isnotFatigued6" name="tired_parameter6" value="false">
+        <label for="isnotFatigued">no</label><br>
+
+        <p>Is pedestrian 6 easily distracted?</p>
+        <input type="radio" id="isDistracted6" name="distract_parameter6" value="true">
+        <label for="isDistracted">yes</label><br>
+        <input type="radio" id="isnotDistracted6" name="distract_parameter6" value="false">
+        <label for="isnotDistracted">no</label><br>
+
+        <p>Is pedestrian 6 healthy?</p>
+        <input type="radio" id="isHealthy6" name="health_parameter6" value="true">
+        <label for="isHealthy">yes</label><br>
+        <input type="radio" id="isnotHealthy6" name="health_parameter6" value="false">
+        <label for="isnotHealthy">no</label><br>
+
+        <p>Is pedestrian 6 walking?</p>
+        <input type="radio" id="isWalking6" name="walk_parameter6" value="true">
+        <label for="isWalking">yes</label><br>
+        <input type="radio" id="isnotWalking6" name="walk_parameter6" value="false">
+        <label for="isnotWalking">no</label><br>
+
+    </fieldset>
+
+    <fieldset id="fieldset7" style="display:none;">
+        <legend>Parameters</legend>
+        <p>Is pedestrian 7 drunk?</p>
+        <input type="radio" id="isDrunk7" name="drunk_parameter7" value="true">
+        <label for="isDrunk">yes</label><br>
+        <input type="radio" id="isnotDrunk7" name="drunk_parameter7" value="false">
+        <label for="isnotDrunk">no</label><br>
+
+        <p>Is pedestrian 7 young?</p>
+        <input type="radio" id="isYoung7" name="young_parameter7" value="true">
+        <label for="isYoung">yes</label><br>
+        <input type="radio" id="isnotYoung7" name="young_parameter7" value="false">
+        <label for="isnotYoung">no</label><br>
+
+        <p>Is pedestrian 7 old?</p>
+        <input type="radio" id="isOld7" name="old_parameter7" value="true">
+        <label for="isOld">yes</label><br>
+        <input type="radio" id="isnotOld7" name="old_parameter7" value="false">
+        <label for="isnotOld">no</label><br>
+
+        <p>Is pedestrian 7 tired?</p>
+        <input type="radio" id="isFatigued7" name="tired_parameter7" value="true">
+        <label for="isFatigued">yes</label><br>
+        <input type="radio" id="isnotFatigued7" name="tired_parameter7" value="false">
+        <label for="isnotFatigued">no</label><br>
+
+        <p>Is pedestrian 7 easily distracted?</p>
+        <input type="radio" id="isDistracted7" name="distract_parameter7" value="true">
+        <label for="isDistracted">yes</label><br>
+        <input type="radio" id="isnotDistracted7" name="distract_parameter7" value="false">
+        <label for="isnotDistracted">no</label><br>
+
+        <p>Is pedestrian 7 healthy?</p>
+        <input type="radio" id="isHealthy7" name="health_parameter7" value="true">
+        <label for="isHealthy">yes</label><br>
+        <input type="radio" id="isnotHealthy7" name="health_parameter7" value="false">
+        <label for="isnotHealthy">no</label><br>
+
+        <p>Is pedestrian 7 walking?</p>
+        <input type="radio" id="isWalking7" name="walk_parameter7" value="true">
+        <label for="isWalking">yes</label><br>
+        <input type="radio" id="isnotWalking7" name="walk_parameter7" value="false">
+        <label for="isnotWalking">no</label><br>
+
+    </fieldset>
+
+    <fieldset id="fieldset8" style="display:none;">
+        <legend>Parameters</legend>
+        <p>Is pedestrian 8 drunk?</p>
+        <input type="radio" id="isDrunk8" name="drunk_parameter8" value="true">
+        <label for="isDrunk">yes</label><br>
+        <input type="radio" id="isnotDrunk8" name="drunk_parameter8" value="false">
+        <label for="isnotDrunk">no</label><br>
+
+        <p>Is pedestrian 8 young?</p>
+        <input type="radio" id="isYoung8" name="young_parameter8" value="true">
+        <label for="isYoung">yes</label><br>
+        <input type="radio" id="isnotYoung8" name="young_parameter8" value="false">
+        <label for="isnotYoung">no</label><br>
+
+        <p>Is pedestrian 8 old?</p>
+        <input type="radio" id="isOld8" name="old_parameter8" value="true">
+        <label for="isOld">yes</label><br>
+        <input type="radio" id="isnotOld8" name="old_parameter8" value="false">
+        <label for="isnotOld">no</label><br>
+
+        <p>Is pedestrian 8 tired?</p>
+        <input type="radio" id="isFatigued8" name="tired_parameter8" value="true">
+        <label for="isFatigued">yes</label><br>
+        <input type="radio" id="isnotFatigued8" name="tired_parameter8" value="false">
+        <label for="isnotFatigued">no</label><br>
+
+        <p>Is pedestrian 8 easily distracted?</p>
+        <input type="radio" id="isDistracted8" name="distract_parameter8" value="true">
+        <label for="isDistracted">yes</label><br>
+        <input type="radio" id="isnotDistracted8" name="distract_parameter8" value="false">
+        <label for="isnotDistracted">no</label><br>
+
+        <p>Is pedestrian 8 healthy?</p>
+        <input type="radio" id="isHealthy8" name="health_parameter8" value="true">
+        <label for="isHealthy">yes</label><br>
+        <input type="radio" id="isnotHealthy8" name="health_parameter8" value="false">
+        <label for="isnotHealthy">no</label><br>
+
+        <p>Is pedestrian 8 walking?</p>
+        <input type="radio" id="isWalking8" name="walk_parameter8" value="true">
+        <label for="isWalking">yes</label><br>
+        <input type="radio" id="isnotWalking8" name="walk_parameter8" value="false">
+        <label for="isnotWalking">no</label><br>
+
+    </fieldset>
+
+    <fieldset id="fieldset9" style="display:none;">
+        <legend>Parameters</legend>
+        <p>Is pedestrian 9 drunk?</p>
+        <input type="radio" id="isDrunk9" name="drunk_parameter9" value="true">
+        <label for="isDrunk">yes</label><br>
+        <input type="radio" id="isnotDrunk9" name="drunk_parameter9" value="false">
+        <label for="isnotDrunk">no</label><br>
+
+        <p>Is pedestrian 9 young?</p>
+        <input type="radio" id="isYoung9" name="young_parameter9" value="true">
+        <label for="isYoung">yes</label><br>
+        <input type="radio" id="isnotYoung9" name="young_parameter9" value="false">
+        <label for="isnotYoung">no</label><br>
+
+        <p>Is pedestrian 9 old?</p>
+        <input type="radio" id="isOld9" name="old_parameter9" value="true">
+        <label for="isOld">yes</label><br>
+        <input type="radio" id="isnotOld9" name="old_parameter9" value="false">
+        <label for="isnotOld">no</label><br>
+
+        <p>Is pedestrian 9 tired?</p>
+        <input type="radio" id="isFatigued9" name="tired_parameter9" value="true">
+        <label for="isFatigued">yes</label><br>
+        <input type="radio" id="isnotFatigued9" name="tired_parameter9" value="false">
+        <label for="isnotFatigued">no</label><br>
+
+        <p>Is pedestrian 9 easily distracted?</p>
+        <input type="radio" id="isDistracted9" name="distract_parameter9" value="true">
+        <label for="isDistracted">yes</label><br>
+        <input type="radio" id="isnotDistracted9" name="distract_parameter9" value="false">
+        <label for="isnotDistracted">no</label><br>
+
+        <p>Is pedestrian 9 healthy?</p>
+        <input type="radio" id="isHealthy9" name="health_parameter9" value="true">
+        <label for="isHealthy">yes</label><br>
+        <input type="radio" id="isnotHealthy9" name="health_parameter9" value="false">
+        <label for="isnotHealthy">no</label><br>
+
+        <p>Is pedestrian 9 walking?</p>
+        <input type="radio" id="isWalking9" name="walk_parameter9" value="true">
+        <label for="isWalking">yes</label><br>
+        <input type="radio" id="isnotWalking9" name="walk_parameter9" value="false">
+        <label for="isnotWalking">no</label><br>
+
+    </fieldset>
+
+    <fieldset id="fieldset10" style="display:none;">
+        <legend>Parameters</legend>
+        <p>Is pedestrian 10 drunk?</p>
+        <input type="radio" id="isDrunk10" name="drunk_parameter10" value="true">
+        <label for="isDrunk">yes</label><br>
+        <input type="radio" id="isnotDrunk10" name="drunk_parameter10" value="false">
+        <label for="isnotDrunk">no</label><br>
+
+        <p>Is pedestrian 10 young?</p>
+        <input type="radio" id="isYoung10" name="young_parameter10" value="true">
+        <label for="isYoung">yes</label><br>
+        <input type="radio" id="isnotYoung10" name="young_parameter10" value="false">
+        <label for="isnotYoung">no</label><br>
+
+        <p>Is pedestrian 10 old?</p>
+        <input type="radio" id="isOld10" name="old_parameter10" value="true">
+        <label for="isOld">yes</label><br>
+        <input type="radio" id="isnotOld10" name="old_parameter10" value="false">
+        <label for="isnotOld">no</label><br>
+
+        <p>Is pedestrian 10 tired?</p>
+        <input type="radio" id="isFatigued10" name="tired_parameter10" value="true">
+        <label for="isFatigued">yes</label><br>
+        <input type="radio" id="isnotFatigued10" name="tired_parameter10" value="false">
+        <label for="isnotFatigued">no</label><br>
+
+        <p>Is pedestrian 10 easily distracted?</p>
+        <input type="radio" id="isDistracted10" name="distract_parameter10" value="true">
+        <label for="isDistracted">yes</label><br>
+        <input type="radio" id="isnotDistracted10" name="distract_parameter10" value="false">
+        <label for="isnotDistracted">no</label><br>
+
+        <p>Is pedestrian 10 healthy?</p>
+        <input type="radio" id="isHealthy10" name="health_parameter10" value="true">
+        <label for="isHealthy">yes</label><br>
+        <input type="radio" id="isnotHealthy10" name="health_parameter10" value="false">
+        <label for="isnotHealthy">no</label><br>
+
+        <p>Is pedestrian 10 walking?</p>
+        <input type="radio" id="isWalking10" name="walk_parameter10" value="true">
+        <label for="isWalking">yes</label><br>
+        <input type="radio" id="isnotWalking10" name="walk_parameter10" value="false">
+        <label for="isnotWalking">no</label><br>
+
+    </fieldset>
+
+    <button name="parameterConfirm" onclick="saveParameters(slider.value)" type="button">Confirm parameters</button>
+    <button onclick="document.location='index.html'" type="button">Return to Main Page</button>
+
+
+    <!--  add age to radio buttons, clean up other parameters  -->
+
+
+    
+</body>
+</html>
